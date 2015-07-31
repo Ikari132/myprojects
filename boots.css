@@ -1,0 +1,65 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+header {
+  background: #333333;
+  height: 5em;
+  margin: 0 0 5em 0;
+}
+header .logo {
+  color: #9f9f9f;
+  font-size: 2em;
+  padding-top: .5em;
+}
+header p {
+  color: #9f9f9f;
+  font-size: 2em;
+}
+.col-xs-6 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+.icon {
+  background: url(car.gif) no-repeat;
+  width: 40px;
+  height: 30px;
+  line-height: 40px;
+}
+.next {
+  line-height: 40px;
+  margin: 10px;
+}
+form img {
+  width: 30px;
+  height: 30px;
+}
+.btn {
+  background: #336699;
+  width: 200px;
+  border-radius: 0;
+}
+footer {
+  background: #333333;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5em 1em;
+}
+footer p {
+  color: #9f9f9f;
+}
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+}
