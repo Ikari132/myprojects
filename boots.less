@@ -1,0 +1,94 @@
+
+@dark: #333333;
+@light:#9f9f9f;
+@btncolor: #336699;
+.imgSize(@scuare){
+	width: @scuare;
+	height: @scuare;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+header{
+	background: @dark;
+	height: 5em;
+	margin: 0 0 5em 0;
+	.logo{
+		color:@light;
+		font-size: 2em;
+		padding-top: .5em;
+	}
+	p{
+		color: @light;
+		font-size: 2em;
+	}
+	
+
+}
+.container{
+	
+}
+.col-xs-6{
+	padding-bottom: 20px;
+	text-align: center;
+
+}
+img{
+	.imgSize(100px)
+}
+
+.icon{
+	background: url(car.gif) no-repeat;
+	width: 40px;
+	height: 30px;
+	line-height: 40px;
+
+}
+.next{
+	line-height: 40px;
+	margin: 10px;
+}
+form{
+	img{
+		.imgSize(30px);
+	}
+	.form-control	{
+		
+
+	}
+}
+.btn{
+	background: @btncolor;
+	width: 200px;
+	border-radius: 0;
+
+}
+
+
+footer{
+	background: @dark;
+	height: 60px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1.5em 1em;
+	
+	p{
+		color: @light;
+
+	}
+
+}
+
+@screen-sm-min:768px;
+@media (max-width: @screen-sm-min) { 
+	.btn{
+		width: 100%;
+	}
+}
