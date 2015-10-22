@@ -13,28 +13,30 @@
 // Соединяемся, выбираем базу данных
 $link = mysql_connect('mysql.hostinger.ru', 'u920919254_123', 'asdf4321')
     or die('Не удалось соединиться: ' . mysql_error());
-echo 'Соединение успешно установлено';
+//echo 'Соединение успешно установлено';
 mysql_select_db('u920919254_123') or die('Не удалось выбрать базу данных');
 
 // Выполняем SQL-запрос
-$query = 'SELECT * FROM aa';
+$query = 'SELECT * FROM messages';
 $result = mysql_query($query) or die('Запрос не удался: ' . mysql_error());
 
 // Выводим результаты в html
-echo "<table>\n";
-while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-    echo "\t<tr>\n";
-    foreach ($line as $col_value) {
-        echo "\t\t<td>$col_value</td>\n";
-    }
-    echo "\t</tr>\n";
-}
-echo "</table>\n";
+if ( is_resource($result) ) 
+        {
+            //echo '<hr />';
+            while ( $row = mysql_fetch_assoc($result) )
+            {
+            
+            $arr[] = array('text'=> $row['message'],'date'=>$row['date']);
+            echo ($arr); 
+            
+           
+            }
+        }
 
 // Освобождаем память от результата
 mysql_free_result($result);
 
 // Закрываем соединение
 mysql_close($link);
-
 ?>

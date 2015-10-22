@@ -4,9 +4,9 @@
             async: false
             
        }).responseText; //ajax
-           
+alert(Json);           
 var objNR=jQuery.parseJSON(Json);
-
+alert(objNR); 
 if(objNR==null){
   var objNS=[];
                               //проверка пустой базы
