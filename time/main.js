@@ -48,7 +48,7 @@ $('h1').append(" Left weeks:"+free);
 $.ajax({
     url: "https://ru.wikipedia.org/w/api.php?action=query&titles=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%81%D1%82%D1%80%D0%B0%D0%BD_%D0%BF%D0%BE_%D0%BE%D0%B6%D0%B8%D0%B4%D0%B0%D0%B5%D0%BC%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8&prop=revisions&rvprop=content&format=json& lang=ru",
     type: 'GET',
-
+    beforeSend: function(xhr){xhr.setRequestHeader("Origin", "http://ikari.zz.mu");},
     success: function (response) {
     	console.log(response.query.pages);
     	var arr = response.query.pages;
