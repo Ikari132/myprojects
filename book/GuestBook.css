@@ -1,0 +1,171 @@
+body {
+	background:snow;
+	margin: 0;
+	font-family: sans-serif;
+}
+header{
+	/*height: 3em;
+	width: 100%;*/
+	margin:0;
+	padding:1% 40%;
+	background-color: tomato;
+	font: 2em sans-serif;  
+	text-align: center;
+
+}
+.formCont{
+	margin:2em 30% 4em 30% ;
+	padding:0em ;
+}
+
+input{
+	width: 100%;
+	background-color: whitesmoke;
+	font-size:2em;
+   	margin-bottom: 1em;
+	border: solid gray 1px;
+}
+
+.input textarea{
+	height: 10em;
+	width: 100%;
+	background-color: whitesmoke;
+	font-size:2em;
+	font-family: arial;
+
+    
+}
+
+#button{
+	width: 5em;
+	background-color: gray;
+	font: 2em sans-serif;
+	text-align: center;
+	margin: 1% 40%;
+	padding: 0;
+	cursor: pointer;
+
+}
+#ok{
+	display: none;
+	position: relative;
+	float: right;
+	background-color: green;
+	width: 100%;
+	
+	bottom: 1.15em;
+	margin: 0em;
+	padding: 0em;
+	z-index: 99;
+
+}
+#all{
+	display: none;
+	float: right;
+	text-align: center;
+	font-size: 1em;
+	position: relative;
+	background-color: red;
+	width: 100%;
+	
+	bottom: 1.15em;
+	margin: 0em;
+	padding: 0em;
+	z-index: 99;
+}
+
+#err{
+	background-color: red;
+	display: none;
+	float: right;
+	position: relative;
+	width: 100%;
+	
+	bottom: 1.15em;
+	z-index: 99;
+
+}
+.answers{
+	margin: 2em 10%;
+	min-height: 36em;
+	/*background: gray;*/
+	color: orange;
+	
+
+}
+.answCont{
+	border-bottom: solid white 2px;
+	border-left: solid white 1px;
+	background: gray;
+	
+}
+.profile{
+	float: left;
+	width: 10%;
+	text-align: center;
+	
+	
+}
+.answCont :nth-last-child(2){
+	border-bottom: none;
+}
+.nik{
+	margin: 1em;
+	font-size: 1.2em;
+
+
+}
+.time{
+
+}
+.mess{
+	margin: 0em 2% 0em 10%;
+	padding: 1em ;
+	border-left: solid white 4px;
+	min-height: 5em;
+	
+}
+#nameErr{
+	position: relative;
+	bottom: 2.5em;
+	left: 110%;
+	color: red;
+	font-size: 2em;
+}
+#messErr{
+	position: relative;
+	bottom: 10em;
+	left: 110%;
+	color: red;
+	font-size: 2em;
+}
+
+.clear{clear: both;}
+.pages{
+	margin: 2em 10%;
+	background: tomato;
+	color: white;
+}
+.Npage{
+	margin-left: 0.5em;
+}
+.Npage:hover{
+	color:red;
+	cursor: pointer;
+}
+#curr{
+	margin-left: 0.5em;
+	text-decoration: underline;
+	font-size: 1.1em;
+}
+.del{
+	color: white;
+	background-color: beige;
+	margin: 2em 10%;
+	padding-left: 35%;
+
+}
+.del:hover{
+	color:red;
+	cursor: pointer;
+}
