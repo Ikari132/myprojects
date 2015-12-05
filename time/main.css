@@ -4,13 +4,22 @@ body{
 }
 .container{
 	width:1200px;
-	margin: 0 30% 0 30%;
+	margin: 0 auto;
 	text-align: center;
 }
 .containera{
 	width:1200px;
-	margin: 0 30% 0 30%;
+	margin: 0 auto;
 	text-align: center;
+}
+.cont{
+	display: inline-block;
+	text-align: left;
+}
+.cont2{
+	display: inline-block;
+	text-align: left;
+	margin: 0 0 0 86%;
 }
 .form{
 	margin: 10% 0 0 0;
