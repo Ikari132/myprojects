@@ -10,7 +10,7 @@ $('#save').click(function(){
     }else{
         localStorage.setItem('age',age);
         localStorage.setItem('countryAge',countryAge);
-        window.location = "index.html"
+        window.location = "done.html"
     }
 });
 

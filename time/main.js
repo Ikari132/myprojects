@@ -5,13 +5,13 @@ var week = localStorage.getItem('age')*52;
 //create years rows
 for (var i = 1; i<=localStorage.getItem('countryAge'); i++) {
 	
-	$('.container').append('<div class=year id='+'y'+i+'  style="height:20px;margin:10px 0 10px 0; border-bottom:solid 1px">'+i+'</div>');
+	$('.container').append('<div class="row"><div class="year_cont col-xs-12" id='+'y'+i+' style="height:20px;margin:10px 0 10px 0; border-bottom:solid 1px"><div class="year">'+i+'</div></div></div>');
 
 };
 //create weeks in years with unic id	
 var weekk = 1;
 
-$('.year').each(function () {
+$('.year_cont').each(function () {
 	for (var i = 1; i<=52 ;i++) {
 		$('#'+this.id).append('<div class="week" id="'+weekk+'" style="float:left;border:solid 1px;border-radius: 50px;width:10px;height:10px;margin:5px">'+'</div>');
 		weekk++

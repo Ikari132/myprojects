@@ -38,11 +38,14 @@ body{
 	border: solid gray 2px;
 	background: none;
 }
+.year{
+	display: inline;
+}
 @media (max-width: 1390px){
-	.container{
-		width: 100%;
-		margin: 0 0% 0 0%;
-	}
+	/*.container{*/
+		/*width: 100%;*/
+		/*margin: 0 0% 0 0%;*/
+	/*}*/
 	.containera{
 		width: 100%;
 		margin: 0 0% 0 0%;
@@ -53,10 +56,7 @@ body{
 		width: 100%;
 		margin: 0 0% 0 0%;
 	}
-	.containera{
-		width: 100%;
-		margin:50% 0;
-	}
+	
 	.inp{
 		width: 100%;
 		display: block;
@@ -73,4 +73,12 @@ body{
 		font-size: 2em;
 	}
 
+}
+@media (max-width: 768px){
+	 .year_cont{
+		height: auto!important;
+	}
+	.year{
+		display: block;
+	}
 }
