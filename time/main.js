@@ -1,36 +1,56 @@
-$( document ).ready(function(){
+$(document).ready(function () {
 //var oldWeek = old*52;
 
-var week = localStorage.getItem('age')*52;
+    var weeks = localStorage.getItem('age') * 52;//get weeks
+    var nowYear = new Date().getFullYear();
+    var birthDate = nowYear - localStorage.getItem('age') + 1;
+    // alert(new Date());
 //create years rows
-for (var i = 1; i<=localStorage.getItem('countryAge'); i++) {
-	
-	$('.container').append('<div class="row"><div class="year_cont col-xs-12" id='+'y'+i+' style="height:20px;margin:10px 0 10px 0; border-bottom:solid 1px"><div class="year">'+i+'</div></div></div>');
+    for (var i = 1; i <= localStorage.getItem('countryAge'); i++) {
 
-};
+        $('.container').append('<div class="row"><div class="year_cont col-xs-12" id=' + 'y' + birthDate + ' style="height:20px;margin:10px 0 10px 0; border-bottom:solid 1px"><div class="year">' + i + "//" + birthDate + '</div></div></div>');
+        birthDate++;
+    }
+    ;
 //create weeks in years with unic id	
-var weekk = 1;
+    var week = 1;
 
-$('.year_cont').each(function () {
-	for (var i = 1; i<=52 ;i++) {
-		$('#'+this.id).append('<div class="week" id="'+weekk+'" style="float:left;border:solid 1px;border-radius: 50px;width:10px;height:10px;margin:5px">'+'</div>');
-		weekk++
-	};
-});
+    $('.year_cont').each(function () {
+        for (var i = 1; i <= 52; i++) {
+            $('#' + this.id).append('<div class="week" id="' + week + '" style="float:left;border:solid 1px;border-radius: 50px;width:10px;height:10px;margin:5px">' + '</div>');
+            week++
+        }
+        ;
+    });
 //change color of week 
-for (var i = 1; i<=week ;i++) {
-	$('#'+i).css('background', 'black').attr('class','done');
-};
+    for (var i = 1; i <= weeks; i++) {
+        $('#' + i).css('background', 'black').attr('class', 'done');
+    }
+    ;
 //calculate free weeks
-var free = 0;
+    var free = 0;
 
-$('.week').each(function () {
-	free++
-});
+    $('.week').each(function () {
+        free++
+    });
 
-$('h1').append(" Left weeks:"+free);
+    $('h1').append(" Left weeks:" + free);
 
+    $('#y' + nowYear + " " + '.done').css('background', ' none');//remove background on weeks in current year
+    var pastWeeks = (new Date().getMonth() + 1) * 4;//get past weeks in this year
 
+    var countPastWeeks = 0;
+    $('#y2015 .done').each(function () {//each all weeks
+
+        if (pastWeeks >= countPastWeeks) {//and stop when past weeks end
+            $(this)
+                .attr('class', 'done')
+                .css('background', 'black');
+        }
+        countPastWeeks++;
+        // console.log(k);
+    });
+    // console.log($('#y'+birthDate).css('color','green'));
 });
 
 // $.ajax({
@@ -69,7 +89,7 @@ $('h1').append(" Left weeks:"+free);
 //     			//console.log(a[3]);
 //     			countrys[cntr[0] ]  = a[3];
 //     		};
-    		
+
 //     		//country.age = ;
 //     		//console.log(country);
 //     		//countrys.sort();
@@ -78,7 +98,7 @@ $('h1').append(" Left weeks:"+free);
 //     	for(c in countrys){
 //     		$('#country').append('<option value='+countrys[c]+'>'+c+'</option>');
 //     	};
-    	
+
 //     },
 //     error: function (response) {
 //     }
